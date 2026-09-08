@@ -7,7 +7,7 @@
 | Hosting (GitHub Pages) | 0 PLN |
 | Scoring engine (client-side JS, no LLM call) | 0 PLN/analysis |
 | Payment processing (Gumroad, ~10% + fixed fee; or Stripe ~1.5–3.5%+fixed) | ~10% of each 29 PLN / €7.99 sale on Gumroad |
-| Domain (not yet purchased — using github.io subdomain for MVP) | 0 PLN (deferred) |
+| Domain — **not being purchased**, staying on the free `github.io` subdomain | 0 PLN |
 | Analytics | 0 PLN (deferred — self-serve free tier when added) |
 | **Total fixed monthly cost** | **0 PLN** |
 | **Total budget spent so far** | **0 PLN of 50 PLN** |
@@ -45,6 +45,6 @@ Slightly more sales are needed per PLN target than under the old $9 pricing, whi
 
 ## Where the 50 PLN budget should go (not yet spent)
 
-Recommended, in order, only once free-tier organic traffic + at least 1 real sale validates demand:
-1. A real domain (e.g. `beattheats.com` or similar) — ~40–50 PLN/year — improves trust/conversion and free SEO authority vs. a `github.io` subdomain. **Requires the owner's payment card — flagged for approval, not spent yet.**
-2. Nothing else is needed at 50 PLN scale — Gumroad, hosting, and the algorithm are all free.
+**Decision: staying on the free `*.github.io` URL, no custom domain, per the owner's explicit instruction.** A custom domain (e.g. `beattheats.com`, ~40–50 PLN/year) would be the only thing worth spending the 50 PLN budget on, and it stays off the table — not a default plan, not something to revisit without the owner raising it again.
+
+Everything else needed to run BeatTheATS (Gumroad, GitHub Pages hosting, the scoring algorithm) is free, so realistically **the 50 PLN budget may simply go unspent** — the whole product runs at 0 PLN cost.

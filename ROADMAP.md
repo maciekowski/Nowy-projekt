@@ -18,7 +18,7 @@
 - Watch unlock-click rate vs. purchase-completion rate (localStorage event counts) to see if the paywall itself is the leak.
 
 ## Phase 3 — 100 → 500 PLN/week
-- If conversion is healthy, buy the domain (~50 PLN budget item) to improve trust and enable real SEO.
+- A custom domain is explicitly off the table for now (owner's instruction — stay on the free `*.github.io` URL, no cost). Revisit only if the owner raises it again after conversion is healthy.
 - Add 3–5 SEO landing pages targeting long-tail queries ("ats resume checker free", "why is my resume being rejected", "[jobtitle] resume keywords").
 - Consider a 3-pack pricing tier ($19 for 3 reports) for repeat job-seekers applying to multiple roles.
 

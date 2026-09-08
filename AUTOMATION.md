@@ -37,7 +37,7 @@ These are the **only** blockers between "code is done" and "can accept real mone
    - Recommended: [Gumroad](https://gumroad.com) — fastest setup, handles global VAT/tax automatically, no code. Create a **29 PLN** digital product called "BeatTheATS — Pełny raport" (Poland is now the primary market — see LOCALIZATION.md §5 for the PLN/EUR pricing rationale; Gumroad auto-converts to each buyer's local currency, so one PLN-priced product covers Europe too), set its **post-purchase redirect URL** to `https://<your-pages-url>/index.html?unlocked=1`.
    - Alternative: Stripe Payment Links (lower fees at scale, slightly more setup).
    - Then replace `PAYMENT_LINK_URL` at the top of `app.js` with the real product URL and push.
-3. **Domain purchase** (optional, ~40–50 PLN/year, needs a payment card): only worth doing after the first sale validates demand (see ROADMAP.md Phase 3). Not required to launch — the free `github.io` URL works for the MVP.
+3. **Domain purchase — NOT happening right now.** We are staying on the free `*.github.io` URL (no CNAME file in this repo, no custom domain configured, zero cost). A custom domain (~40–50 PLN/year) is listed in ROADMAP.md as a *possible* Phase 3 item only after the first sale validates demand, and only if the owner explicitly decides to spend part of the 50 PLN budget on it — it is not planned or assumed by default.
 4. **Real analytics** (optional): add a free Plausible/GA4 account and paste the tracking snippet into `index.html` `<head>`. Deferred because it requires the owner's own account, not because it's hard.
 
 ## API cost control
