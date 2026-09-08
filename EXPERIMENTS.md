@@ -20,6 +20,12 @@ Format: HYPOTHESIS → TEST → DATA → DECISION
 - **Data:** *Pending.*
 - **Decision:** *Pending — if <2% after 100+ analyses, rework the paywall copy/teaser (e.g. show more of the gap, sharpen urgency) before concluding the price is wrong.*
 
+## EXP-003: Production verification before distribution (this session)
+- **Hypothesis:** The site is live and reachable (as stated at the start of this session).
+- **Test:** Checked the GitHub Actions deploy run for the initial commit, then re-ran it after attempting an automated fix.
+- **Data:** Both runs failed with `Get Pages site failed... verify that the repository has Pages enabled`. A follow-up attempt to auto-enable Pages via the workflow's own `pages: write` permission also failed: `Create Pages site failed. Error: Resource not accessible by integration` — GitHub does not allow the default Actions token to enable Pages for the first time; only a human with repo admin access, clicking in Settings → Pages, can do this. Confirmed only one branch exists in the repo (`claude/ai-ceo-challenge-b2c-rwtyum`), so there is no alternate deployment elsewhere either.
+- **Decision:** The product is **not currently live**. This blocks every subsequent step (STEP 2–8 all assume a real URL to distribute). One owner action unblocks everything: repo → Settings → Pages → Build and deployment → Source: "GitHub Actions" (1 click, no credentials handed to anyone). Once done, the existing workflow deploys automatically on the next push, or can be re-run manually.
+
 ## Kill criteria (per brief)
 If, after running EXP-001 in 5+ communities and iterating copy once, there are still 0 free analyses or 0 purchases after a reasonable volume of free-tool usage (~100+ analyses with near-0% conversion), write a WHY_IT_FAILED note here and fall back to TOP 3 runner-up (#20 Mock-interview predictor or #14 AI-detector false-positive checker from MARKET.md).
 
