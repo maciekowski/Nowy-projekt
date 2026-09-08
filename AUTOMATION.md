@@ -34,7 +34,7 @@ These are the **only** blockers between "code is done" and "can accept real mone
 
 1. **Enable GitHub Pages** (1 click, repo owner only): repo Settings → Pages → Build and deployment → Source: "GitHub Actions". The workflow in this PR will then deploy automatically. *(I don't have Pages-admin API access from this session, so I can't flip this switch myself.)*
 2. **Create a payment link** (~5 minutes, needs the owner's identity/bank details to receive payouts — this is inherently something only the business owner can do):
-   - Recommended: [Gumroad](https://gumroad.com) — fastest setup, handles global VAT/tax automatically, no code. Create a $9 digital product called "BeatTheATS Full Report", set its **post-purchase redirect URL** to `https://<your-pages-url>/index.html?unlocked=1`.
+   - Recommended: [Gumroad](https://gumroad.com) — fastest setup, handles global VAT/tax automatically, no code. Create a **29 PLN** digital product called "BeatTheATS — Pełny raport" (Poland is now the primary market — see LOCALIZATION.md §5 for the PLN/EUR pricing rationale; Gumroad auto-converts to each buyer's local currency, so one PLN-priced product covers Europe too), set its **post-purchase redirect URL** to `https://<your-pages-url>/index.html?unlocked=1`.
    - Alternative: Stripe Payment Links (lower fees at scale, slightly more setup).
    - Then replace `PAYMENT_LINK_URL` at the top of `app.js` with the real product URL and push.
 3. **Domain purchase** (optional, ~40–50 PLN/year, needs a payment card): only worth doing after the first sale validates demand (see ROADMAP.md Phase 3). Not required to launch — the free `github.io` URL works for the MVP.

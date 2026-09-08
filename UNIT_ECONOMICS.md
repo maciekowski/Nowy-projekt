@@ -6,7 +6,7 @@
 |---|---|
 | Hosting (GitHub Pages) | 0 PLN |
 | Scoring engine (client-side JS, no LLM call) | 0 PLN/analysis |
-| Payment processing (Gumroad, ~10% + fixed fee; or Stripe ~1.5–3.5%+fixed) | ~10% of each $9 sale on Gumroad |
+| Payment processing (Gumroad, ~10% + fixed fee; or Stripe ~1.5–3.5%+fixed) | ~10% of each 29 PLN / €7.99 sale on Gumroad |
 | Domain (not yet purchased — using github.io subdomain for MVP) | 0 PLN (deferred) |
 | Analytics | 0 PLN (deferred — self-serve free tier when added) |
 | **Total fixed monthly cost** | **0 PLN** |
@@ -16,23 +16,27 @@ Because the free analysis runs entirely in the visitor's browser (no server, no 
 
 ## Per-sale economics (Gumroad, ~10% take rate assumption)
 
-| | Amount |
-|---|---|
-| List price | $9.00 (~36 PLN) |
-| Payment processor fee (~10%) | ~$0.90 (~3.6 PLN) |
-| **Net revenue per sale** | **~$8.10 (~32.4 PLN)** |
-| Marginal cost of goods (compute) | 0 PLN |
-| **Gross margin** | **~90%** |
+Repriced for the PL/EU pivot (see LOCALIZATION.md §5 for rationale — was $9/~36 PLN, anchored to a US competitor that doesn't exist as a reference point for Polish buyers).
 
-## Sales needed to hit each milestone (net revenue basis)
+| | Poland (PLN) | Rest of Europe (EUR) |
+|---|---|---|
+| List price | 29 PLN | €7.99 |
+| Payment processor fee (~10%) | ~2.9 PLN | ~€0.80 |
+| **Net revenue per sale** | **~26.1 PLN** | **~€7.19 (~31 PLN)** |
+| Marginal cost of goods (compute) | 0 PLN | 0 PLN |
+| **Gross margin** | **~90%** | **~90%** |
 
-| Target | Net PLN/week | Sales/week @ 32.4 PLN net | Sales/day |
+## Sales needed to hit each milestone (net revenue basis, PLN price as primary market)
+
+| Target | Net PLN/week | Sales/week @ ~26 PLN net | Sales/day |
 |---|---|---|---|
-| First customer | 32 PLN | 1 | — |
+| First customer | 26 PLN | 1 | — |
 | 100 PLN/week | 100 | 4 | <1 |
-| 500 PLN/week | 500 | 16 | 2–3 |
-| 1 000 PLN/week | 1 000 | 31 | 4–5 |
-| 5 000 PLN/week | 5 000 | 155 | 22 |
+| 500 PLN/week | 500 | 19 | ~3 |
+| 1 000 PLN/week | 1 000 | 38 | ~5–6 |
+| 5 000 PLN/week | 5 000 | 192 | ~27 |
+
+Slightly more sales are needed per PLN target than under the old $9 pricing, which is the direct tradeoff for a lower-friction price aimed at a market with no existing reference point for this product.
 
 ## What has to be true to reach 5 000 PLN/week
 

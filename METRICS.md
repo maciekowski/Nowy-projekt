@@ -10,7 +10,7 @@ Tracked automatically, client-side, zero cost (see `trackEvent()` in `app.js`, s
 | Leads | Visitors who run a free analysis | `analysis_run` event count |
 | Unlock clicks | Leads who click "Unlock full report" | `unlock_click` event count |
 | Conversions | Completed purchases | `purchase_completed` event count (fires on `?unlocked=1` return) |
-| Revenue | Conversions × 36 PLN | Gumroad/Stripe dashboard (source of truth) |
+| Revenue | Conversions × 29 PLN (Poland) or €7.99 (rest of Europe) | Gumroad/Stripe dashboard (source of truth) |
 | AOV | Average order value | Gumroad/Stripe dashboard |
 | CAC | Spend / new customers | 0 PLN spend currently (organic only) |
 | Refunds | Refund requests / conversions | Gumroad/Stripe dashboard |

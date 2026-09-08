@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BeatTheATS — Free ATS Resume Checker</title>
-<meta name="description" content="Paste your resume and a job description. Get an instant ATS match score, see exactly which keywords are missing, and fix your resume before you apply.">
+<title>BeatTheATS — Darmowe sprawdzenie CV pod ATS</title>
+<meta name="description" content="Sprawdź, czy Twoje CV przejdzie przez systemy ATS, zanim wyślesz je do pracodawcy. Darmowy wynik w 10 sekund.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,41 +13,47 @@
 <header class="site-header">
   <div class="wrap">
     <span class="logo">🎯 BeatTheATS</span>
-    <a class="nav-cta" href="#tool">Check my resume free</a>
+    <div class="header-right">
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="pl">PL</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="nav-cta" href="#tool" data-i18n="nav_cta">Sprawdź CV za darmo</a>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>Your resume might be getting rejected by a <span class="hl">robot</span> — before a human ever sees it.</h1>
-    <p class="sub">75% of employers filter applications with ATS software before a recruiter reads them. Paste your resume and the job ad below to see your match score in 10 seconds. Free.</p>
-    <a href="#tool" class="btn btn-primary btn-lg">Check my resume — free</a>
-    <p class="trust">No signup. No email required. Your text never leaves your browser until you choose to unlock the full report.</p>
+    <h1 data-i18n-html="hero_h1_html">Twoje CV może zostać odrzucone przez <span class="hl">robota</span>, zanim zobaczy je człowiek.</h1>
+    <p class="sub" data-i18n="hero_sub"></p>
+    <a href="#tool" class="btn btn-primary btn-lg" data-i18n="hero_cta">Sprawdź CV — za darmo</a>
+    <p class="trust" data-i18n="hero_trust"></p>
   </div>
 </section>
 
 <section class="how">
   <div class="wrap steps">
-    <div class="step"><span class="num">1</span><h3>Paste</h3><p>Your resume text and the job description you're applying to.</p></div>
-    <div class="step"><span class="num">2</span><h3>Score</h3><p>Instant ATS match score + what's missing, right in your browser.</p></div>
-    <div class="step"><span class="num">3</span><h3>Fix</h3><p>Unlock the full keyword gap report for $9 and fix it before you apply.</p></div>
+    <div class="step"><span class="num">1</span><h3 data-i18n="step1_title">Wklej</h3><p data-i18n="step1_desc"></p></div>
+    <div class="step"><span class="num">2</span><h3 data-i18n="step2_title">Wynik</h3><p data-i18n="step2_desc"></p></div>
+    <div class="step"><span class="num">3</span><h3 data-i18n="step3_title">Popraw</h3><p data-i18n="step3_desc"></p></div>
   </div>
 </section>
 
 <section id="tool" class="tool">
   <div class="wrap">
-    <h2>Check your resume</h2>
+    <h2 data-i18n="tool_h2">Sprawdź swoje CV</h2>
     <div class="grid2">
       <div class="field">
-        <label for="resumeInput">Your resume (paste as plain text)</label>
-        <textarea id="resumeInput" rows="14" placeholder="Paste your full resume text here..."></textarea>
+        <label for="resumeInput" data-i18n="resume_label">Twoje CV (wklej jako zwykły tekst)</label>
+        <textarea id="resumeInput" rows="14" data-i18n-placeholder="resume_placeholder" placeholder="Wklej tutaj pełną treść swojego CV..."></textarea>
       </div>
       <div class="field">
-        <label for="jobInput">Job description you're applying to</label>
-        <textarea id="jobInput" rows="14" placeholder="Paste the full job posting here..."></textarea>
+        <label for="jobInput" data-i18n="job_label">Ogłoszenie o pracę, na które aplikujesz</label>
+        <textarea id="jobInput" rows="14" data-i18n-placeholder="job_placeholder" placeholder="Wklej tutaj pełną treść ogłoszenia o pracę..."></textarea>
       </div>
     </div>
-    <button id="analyzeBtn" class="btn btn-primary btn-lg">Analyze match →</button>
+    <button id="analyzeBtn" class="btn btn-primary btn-lg" data-i18n="analyze_btn">Analizuj dopasowanie →</button>
     <p id="errorMsg" class="error" hidden></p>
   </div>
 </section>
@@ -59,45 +65,46 @@
         <span id="scoreValue">0</span><small>/100</small>
       </div>
       <div class="score-summary">
-        <h2 id="scoreHeadline">Your ATS match score</h2>
+        <h2 id="scoreHeadline">Twój wynik dopasowania ATS</h2>
         <p id="scoreText"></p>
       </div>
     </div>
 
     <div class="report-grid">
       <div class="card">
-        <h3>✅ Keywords you already have</h3>
+        <h3 data-i18n="matched_h3">✅ Słowa kluczowe, które już masz</h3>
         <ul id="matchedList" class="tag-list matched"></ul>
       </div>
       <div class="card" id="missingCard">
-        <h3>⚠️ Missing keywords</h3>
+        <h3 data-i18n="missing_h3">⚠️ Brakujące słowa kluczowe</h3>
         <ul id="missingListFree" class="tag-list"></ul>
         <div id="lockedOverlay" class="locked-overlay">
-          <p><strong id="lockedCount"></strong> more missing keywords, formatting fixes, and specific rewrite suggestions are in the full report.</p>
-          <button id="unlockBtn" class="btn btn-primary">Unlock full report — $9</button>
+          <p id="lockedText"></p>
+          <button id="unlockBtn" class="btn btn-primary" data-i18n="unlock_btn">Odblokuj pełny raport</button>
         </div>
         <ul id="missingListFull" class="tag-list missing" hidden></ul>
       </div>
     </div>
 
     <div class="card tips-card" id="tipsCard">
-      <h3>🛠️ Quick tips</h3>
+      <h3 data-i18n="tips_h3">🛠️ Szybkie wskazówki</h3>
       <ul id="tipsListFree"></ul>
       <ul id="tipsListFull" hidden></ul>
     </div>
 
     <div id="fullReportActions" class="full-actions" hidden>
-      <button id="printBtn" class="btn btn-secondary">Download / Print full report (PDF)</button>
+      <button id="printBtn" class="btn btn-secondary" data-i18n="print_btn">Pobierz / wydrukuj pełny raport (PDF)</button>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>BeatTheATS — built to answer one question: why didn't I even get a callback? No account, no tracking beyond anonymous usage counts. Contact: hello@beattheats.example</p>
+    <p data-i18n="footer_text"></p>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
