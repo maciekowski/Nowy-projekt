@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeatTheATS — Free ATS Resume Checker</title>
+<meta name="description" content="Paste your resume and a job description. Get an instant ATS match score, see exactly which keywords are missing, and fix your resume before you apply.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo">🎯 BeatTheATS</span>
+    <a class="nav-cta" href="#tool">Check my resume free</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Your resume might be getting rejected by a <span class="hl">robot</span> — before a human ever sees it.</h1>
+    <p class="sub">75% of employers filter applications with ATS software before a recruiter reads them. Paste your resume and the job ad below to see your match score in 10 seconds. Free.</p>
+    <a href="#tool" class="btn btn-primary btn-lg">Check my resume — free</a>
+    <p class="trust">No signup. No email required. Your text never leaves your browser until you choose to unlock the full report.</p>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap steps">
+    <div class="step"><span class="num">1</span><h3>Paste</h3><p>Your resume text and the job description you're applying to.</p></div>
+    <div class="step"><span class="num">2</span><h3>Score</h3><p>Instant ATS match score + what's missing, right in your browser.</p></div>
+    <div class="step"><span class="num">3</span><h3>Fix</h3><p>Unlock the full keyword gap report for $9 and fix it before you apply.</p></div>
+  </div>
+</section>
+
+<section id="tool" class="tool">
+  <div class="wrap">
+    <h2>Check your resume</h2>
+    <div class="grid2">
+      <div class="field">
+        <label for="resumeInput">Your resume (paste as plain text)</label>
+        <textarea id="resumeInput" rows="14" placeholder="Paste your full resume text here..."></textarea>
+      </div>
+      <div class="field">
+        <label for="jobInput">Job description you're applying to</label>
+        <textarea id="jobInput" rows="14" placeholder="Paste the full job posting here..."></textarea>
+      </div>
+    </div>
+    <button id="analyzeBtn" class="btn btn-primary btn-lg">Analyze match →</button>
+    <p id="errorMsg" class="error" hidden></p>
+  </div>
+</section>
+
+<section id="results" class="results" hidden>
+  <div class="wrap">
+    <div class="score-row">
+      <div class="score-circle" id="scoreCircle">
+        <span id="scoreValue">0</span><small>/100</small>
+      </div>
+      <div class="score-summary">
+        <h2 id="scoreHeadline">Your ATS match score</h2>
+        <p id="scoreText"></p>
+      </div>
+    </div>
+
+    <div class="report-grid">
+      <div class="card">
+        <h3>✅ Keywords you already have</h3>
+        <ul id="matchedList" class="tag-list matched"></ul>
+      </div>
+      <div class="card" id="missingCard">
+        <h3>⚠️ Missing keywords</h3>
+        <ul id="missingListFree" class="tag-list"></ul>
+        <div id="lockedOverlay" class="locked-overlay">
+          <p><strong id="lockedCount"></strong> more missing keywords, formatting fixes, and specific rewrite suggestions are in the full report.</p>
+          <button id="unlockBtn" class="btn btn-primary">Unlock full report — $9</button>
+        </div>
+        <ul id="missingListFull" class="tag-list missing" hidden></ul>
+      </div>
+    </div>
+
+    <div class="card tips-card" id="tipsCard">
+      <h3>🛠️ Quick tips</h3>
+      <ul id="tipsListFree"></ul>
+      <ul id="tipsListFull" hidden></ul>
+    </div>
+
+    <div id="fullReportActions" class="full-actions" hidden>
+      <button id="printBtn" class="btn btn-secondary">Download / Print full report (PDF)</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>BeatTheATS — built to answer one question: why didn't I even get a callback? No account, no tracking beyond anonymous usage counts. Contact: hello@beattheats.example</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
